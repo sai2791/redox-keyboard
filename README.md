@@ -5,10 +5,10 @@
 <img src="img/qmk-badge-dark.png" alt="QMK" width="145"/>
 </p>
 
-The Redox project is an open-source, [QMK (Quantum Mechanical Keyboard Firmware)](https://github.com/qmk/qmk_firmware) powered, ergonomic split mechanical keyboard. This repository will be used to share information about the project and instruction on how to use and assembly the Redox keyboard.
+The Redox project is an open-source, [QMK (Quantum Mechanical Keyboard Firmware)](https://github.com/qmk/qmk_firmware) powered, ergonomic split mechanical keyboard. This repository will be used to share information about the project and instruction on how to use and assemble the Redox keyboard.
 
 <p align="center">
-<img src="img/redox-1.jpg" alt="Redox" width="600"/>
+<img src="img/redox-1.jpg" alt="Redox" width="600" style="border-radius:3%"/>
 </p>
 
 **Designer's bio**: [Mattia Dal Ben (aka u/TiaMaT102)](mailto:matthewdibi@gmail.com) obtained a master's degree in Electrical Engineering with a specialization in Computer Science at the University of Udine. Currently works as a Software Engineer in R&D department for a big IoT and Embedded Computers company. Mechanical keyboard enthusiast and maker, the Redox keyboard is the result of all of his passions.
@@ -34,12 +34,14 @@ As an Ergodox user I couldn't ignore the few flaws of the original design and in
 
 - [**Redox handwire**](https://www.thingiverse.com/thing:2704567)
   - [Tilted Redox case](https://www.thingiverse.com/thing:2767216): tilted case for the Redox prototype by jschloer.
-  - [couscous-kbd](https://github.com/CoenSchalkwijk/couscous-kbd): Redox-inspired parametric OpenSCAD keyboard design.
+  - [couscous-kbd](https://gitlab.com/cschalkwijk/couscous-kbd): Redox-inspired parametric OpenSCAD keyboard design.
   - [Redox tenting kit](https://www.thingiverse.com/make:484843): modified base to support tenting, mini-USB for the interconnect, and a hole for microswitch for reset needed when uploading new firmware by [Lenbok](https://github.com/Lenbok).
   - [Iris-inspired Redox case](https://github.com/Lenbok/scad-redox-case): a case inspired both by the Redox rev1.0 and the Iris designed with OpenSCAD by [Lenbok](https://github.com/Lenbok).
   - [Redodactyl keyboard](https://www.reddit.com/r/MechanicalKeyboards/comments/9j5pw5/enter_the_redodactyl_first_build/): handwired 3D printed Dactyl-inspired Redox variant by u/darknao.
+- [**Redox Manuform**](https://www.thingiverse.com/thing:3503380): full rework of the Redox case inspired by the Dactyl Manuform. Designed by [Fosk\_LL](https://www.thingiverse.com/Fosk_LL/about). 
 - [**Redox rev1.0**](https://github.com/mattdibi/redox-keyboard/tree/master/redox)
-	- [3D printed case](https://www.thingiverse.com/thing:2886662), freely available.
+	- [3D printable case](https://www.thingiverse.com/thing:2886662), freely available.
+	- [Travel-friendly Redox Keyboard case](https://www.thingiverse.com/thing:3607303), by by [Fosk\_LL](https://www.thingiverse.com/Fosk_LL/about).
 	- Rev1.0 PCBs: available at [Falbatech's store](https://falba.tech/product/redox-pcb-electrical-boards-set-of-2/)
 	- Commercially available cases:
 		- [Falbatech's bamboo cases with tilt kit](https://falba.tech/product/redox-standard-lift-bamboo-wood-case-with-oil-finish/)
@@ -53,6 +55,8 @@ As an Ergodox user I couldn't ignore the few flaws of the original design and in
     - Rev1.0W PCBs: available at [Falbatech's store](https://falba.tech/product/redox-wireless-pcb-electrical-boards-set-of-2/)
     - Commercially available cases:
         - [Falbatech's bamboo and aliminium cases](https://falba.tech/product/redox-wireless-standard-lift-bamboo-wood-case-with-oil-finish/)
+		- [Falbatech's fullhand bamboo cases](https://falba.tech/product/redox-wireless-standard-lift-bamboo-wood-case-with-oil-finish-ver-1/)
+		- [Falbatech's PVC cases](https://falba.tech/product/redox-wireless-standard-pvc-white-case/)
 
 ### Donations
 

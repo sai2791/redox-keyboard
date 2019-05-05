@@ -24,11 +24,14 @@ Hardware availability:
 |   2 | PJ-320A 4 poles 3.5 mm TRRS connectors        |                                                     |
 |   2 | 4.7 kOhm resistors                            | Need to be soldered on one half only                |
 |   2 | Through hole momentary switch                 | Dimensions 6mm x 6mm x 4.3mm                        |
-|   2 | Arduino Pro Micro compatible microcontrollers |                                                     |
+|   2 | Arduino Pro Micro compatible microcontrollers | Beware of the infamous Green Pro Micro, see note below. |
 |   1 | TRRS cable                                    |                                                     |
 |   1 | USB micro cable                               |                                                     |
 |  70 | Cherry MX compatible keycaps                  | 10x 1.25u keycaps, 6x 1.5u keycaps, 54x 1u keycaps  |
 |  14 | WS2812/WS2812B leds                           | Optional RGB-underglow                              |
+
+
+> :warning: Pay attention to the Pro Micro you use in this project. Online you can find the infamous **Green Pro Micros** which have the same pinout of the normal Pro Micro but use a different power circuitry. Being the Redox a split keyboard that relies on detecting which side is directly powered to find which side is the master, these clones are not suited for the task. A more detailed explaination [here](http://www.40percent.club/2017/09/green-pro-micro.html). Please note that they can come in different colors, not necessarily green.
 
 ## Other assembly guides
 
@@ -36,6 +39,16 @@ External links to some other guides to building the Redox keyboard:
 
 - ["*Build your own keyboard*"](https://medium.com/@costask/build-your-own-keyboard-5df65cb68839) by @costask.
 - [Imgur build log](https://imgur.com/a/a6ck2Nc) (3D printed case).
+- ["*First Homebrew Keyboard -redox Build Log-*"](https://x1.inkenkun.com/archives/6007) by [インケンch](https://www.youtube.com/channel/UCXJZdip7JmW74HQHCtfYzFw) (Japanese only)
+
+### Video guides
+
+Two great video guides by [インケンch](https://www.youtube.com/channel/UCXJZdip7JmW74HQHCtfYzFw) (Japanese only).
+
+<p align="center">
+<a href="http://www.youtube.com/watch?v=EVRlU_eR9j4"><img src="http://img.youtube.com/vi/EVRlU_eR9j4/0.jpg" alt="Redox hardware assembly" width="300"/></a>
+<a href="http://www.youtube.com/watch?v=jRIRdfIIa1Q"><img src="http://img.youtube.com/vi/jRIRdfIIa1Q/0.jpg" alt="Redox firmware" width="300"/></a>
+</p>
 
 ## Assembly guide
 
@@ -150,12 +163,13 @@ If you define `EE_HANDS` in your `config.h`, you will need to set the EEPROM for
 The EEPROM is used to store whether the half is left handed or right handed. This makes it so that the same firmware file will run on both hands instead of having to flash left and right handed versions of the firmware to each half. To flash the EEPROM file for the left half run:
 ```
 $ cd path/to/qmk/folder
-$ avrdude -p atmega32u4 -P $(COM_PORT) -c avr109 -U eeprom:w:keyboards/lets_split/eeprom-lefthand.eep
-
+avrdude -p atmega32u4 -P $(COM_PORT) -c avr109 -U eeprom:w:"./quantum/split_common/eeprom-lefthand.eep"
+// or the equivalent in dfu-programmer
 ```
 and similarly for right half
 ```
-$ avrdude -p atmega32u4 -P $(COM_PORT) -c avr109 -U eeprom:w:keyboards/lets_split/eeprom-righthand.eep
+avrdude -p atmega32u4 -P $(COM_PORT) -c avr109 -U eeprom:w:"./quantum/split_common/eeprom-righthand.eep"
+// or the equivalent in dfu-programmer
 ```
 
 > :warning: Replace `$(COM_PORT)` with the port of your device (e.g. `/dev/ttyACM0`)
@@ -179,6 +193,10 @@ After you have flashed the EEPROM, you then need to set `EE_HANDS` in `keyboard/
 #define RGBLIGHT_ANIMATIONS
 // ...
 ```
+
+Then rebuild the hex files and reflash.
+
+Note that you need to program both halves, but you have the option of using different keymaps for each half. You could program the left half with a QWERTY layout and the right half with a Colemak layout using bootmagic's default layout option. Then if you connect the left half to a computer by USB the keyboard will use QWERTY and Colemak when the right half is connected.
 
 ## Hot swappable mod
 
