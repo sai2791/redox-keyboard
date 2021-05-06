@@ -40,6 +40,7 @@ External links to some other guides to building the Redox keyboard:
 - ["*Build your own keyboard*"](https://medium.com/@costask/build-your-own-keyboard-5df65cb68839) by @costask.
 - [Imgur build log](https://imgur.com/a/a6ck2Nc) (3D printed case).
 - ["*First Homebrew Keyboard -redox Build Log-*"](https://x1.inkenkun.com/archives/6007) by [インケンch](https://www.youtube.com/channel/UCXJZdip7JmW74HQHCtfYzFw) (Japanese only)
+- ["*Split Keyboard Build*"](https://kubami.com/articles/split-keyboard-build/) by Kuba Misiorny @kubami.
 
 ### Video guides
 
@@ -79,7 +80,7 @@ Installation steps:
   * If you want hot swappable switches, see
     [the hot swappable switch instructions](#hot-swappable-switches).
 - Flip the PCBs again.
-- Solder Pro Micros to the header pins following the PCB labeling.
+- Solder Pro Micros to the header pins **following the PCB labeling**. The Pro Micro on the right half should be installed with the bottom facing the Redox PCB, the Pro Micro on the left half should be installed with the bottom facing away from the PCB. See [pictures](#left-hand-back-side-1) for details.
 
 ##### Right hand back side:
 <p align="center">
